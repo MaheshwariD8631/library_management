@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+<h2>📘 Books</h2>
+<table border="1" cellpadding="10">
+<tr>
+<th>Title</th><th>Author</th><th>Category</th><th>ISBN</th><th>Available</th>
+</tr>
+{% for b in data %}
+<tr>
+<td>{{ b.title }}</td>
+<td>{{ b.author }}</td>
+<td>{{ b.category }}</td>
+<td>{{ b.isbn }}</td>
+<td>{{ b.available }}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+<h2>📖 Issue a Book</h2>
+
+<form method="POST">{% csrf_token %}
+<select name="book" required style="width:100%;padding:10px;">
+<option value="">Select Book</option>
+{% for b in books %}
+<option value="{{ b.id }}">{{ b.title }}</option>
+{% endfor %}
+</select>
+
+<select name="member" required style="width:100%;padding:10px;margin-top:10px;">
+<option value="">Select Member</option>
+{% for m in members %}
+<option value="{{ m.id }}">{{ m.name }}</option>
+{% endfor %}
+</select>
+
+<button class="btn" style="margin-top:10px;width:100%;">Issue</button>
+</form>
+
+</div>
+{% endblock %}

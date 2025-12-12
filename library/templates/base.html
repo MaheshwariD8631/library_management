@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Library Management System</title>
+<style>
+body{font-family:Arial;background:#eef2f7;margin:0;padding:0;}
+.nav{background:#0f172a;padding:15px;text-align:center;}
+.nav a{color:white;text-decoration:none;margin:0 20px;font-weight:bold;}
+.card{background:white;width:80%;margin:20px auto;padding:20px;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.1);}
+.btn{background:#0284c7;padding:10px;color:white;text-decoration:none;border-radius:5px;}
+</style>
+</head>
+<body>
+
+<div class="nav">
+<a href="/">Home</a>
+<a href="/books/">Books</a>
+<a href="/members/">Members</a>
+<a href="/issue/">Issue Book</a>
+<a href="/issued/">Issued Books</a>
+</div>
+
+{% block content %}{% endblock %}
+</body>
+</html>
